@@ -10,9 +10,6 @@ Live version here: http://dictionary.dynamobim.com
 ## Run in Development Mode
 - In root directory, type ```npm run start``` into the command line.
 
-#### Toggle AVP / Example images.
-- In `src/config/index.js`,  change `IMAGE_FALSE_AVP_TRUE` to `true` for AVP sample (experimental) and `false` for Dynamo example images (default).
-
 ## Deploy to Autodesk
 
 - confirm that `homepage` in `package.json` is set to `http://dictionary.dynamobim.com/`. The developer may change this address depending on the staging environment.
