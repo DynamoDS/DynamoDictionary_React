@@ -4057,7 +4057,7 @@
 }, {
     "Name": "<=",
     "imageFile": ["LessThanOrEqualTo"],
-    "dynFile": ["<LessThanOrEqualTo"],
+    "dynFile": ["LessThanOrEqualTo"],
     "folderPath": "Math/Operators/Action",
     "inDepth": "<= is the Less Than Or Equal To operator. If the x input is less than the y input, or if the two values are equal, it will return true. If x is greater than y, this operator will return false. In the example below, we use two number sliders to control the inputs to the <= operator."
 }, {
