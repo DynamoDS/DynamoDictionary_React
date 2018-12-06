@@ -516,7 +516,7 @@
 		"inDepth": "OverrideColorInView will change the element's color in the active view regardless of the current model display style. For example, an element with an overridden color will display the same in Wireframe, Hidden Line, and Shaded views styles."
 	}, {
 		"Name": "OverrideInView",
-		"imageFile": ["OverrideInView"],
+		"imageFile": ["OverrideInView.gif"],
 		"dynFile": ["OverrideInView"],
 		"folderPath": "Revit/Elements/Element/Action",
 		"inDepth": "OverrideInView will alter the graphics settings of input elements. The override created in Dynamo will dynamically change in Revit."
@@ -648,7 +648,7 @@
 		"inDepth": "Types returns all FamilyTypes that exist in a Family."
 	}, {
 		"Name": "ByCoordinates",
-		"imageFile": ["ByCoordinates"],
+		"imageFile": ["ByCoordinates.gif"],
 		"dynFile": ["ByCoordinates"],
 		"folderPath": "Revit/Elements/FamilyInstance/Create",
 		"inDepth": "Reference points are created in the Revit conceptual design environment."
@@ -666,13 +666,13 @@
 		"inDepth": "Place a Revit family instance given the FamilyType (also known as the FamilySymbol in the Revit API) on a surface derived from a backing Revit face as reference, a reference direction and a point location where to place the family. Note: The FamilyType should be workplane based and the input surface must be created from a Revit Face. The reference direction defines the rotation of the instance on the reference, and thus cannot be perpendicular to the face."
 	}, {
 		"Name": "ByPoint",
-		"imageFile": ["ByPoint"],
+		"imageFile": ["ByPoint.gif"],
 		"dynFile": ["ByPoint"],
 		"folderPath": "Revit/Elements/FamilyInstance/Create",
 		"inDepth": "Reference points are created in the Revit conceptual design environment."
 	}, {
 		"Name": "ByPointAndLevel",
-		"imageFile": ["ByPointAndLevel"],
+		"imageFile": ["ByPointAndLevel.gif"],
 		"dynFile": ["ByPointAndLevel"],
 		"folderPath": "Revit/Elements/FamilyInstance/Create",
 		"inDepth": "ByPointAndLevel uses a point in Dynamo and Revit level to place a FamilyInstance. This is useful for placing large collections of families across multiple levels. The point location and the FamilyInstance within Revit are dynamically linked, allowing real-time manipulation from Dynamo."
@@ -684,7 +684,7 @@
 		"inDepth": "ByFamilyType returns all FamilyInstances occurring in Revit of a specified Family. FamilyInstance is the bottom level in the Family, Type, and Instance heirarchy and is an element in the Revit file that can be queried for its location, count, and other instance specific qualities."
 	}, {
 		"Name": "SetRotation",
-		"imageFile": ["SetRotation"],
+		"imageFile": ["SetRotation.gif"],
 		"dynFile": ["SetRotation"],
 		"folderPath": "Revit/Elements/FamilyInstance/Action",
 		"inDepth": "SetRotation allows the rotation of a FamilyInstance from within Dynamo. Since FamilyInstances are individual elements in a Revit file, each can be rotated to a different angle. This can be particularly useful for placing a FamilyInstance in an arc pattern, as each instance has a unique rotation."
@@ -798,13 +798,13 @@
 		"inDepth": "Name returns the name of a FillRegionType as a string. String outputs are useful for data filtering and creating boolean masks."
 	}, {
 		"Name": "ByOutlineTypeAndLevel (outline, floorType, level)",
-		"imageFile": ["ByOutlineTypeAndLevel (outline, floorType, level)"],
+		"imageFile": ["ByOutlineTypeAndLevel (outline, floorType, level).gif"],
 		"dynFile": ["ByOutlineTypeAndLevel (outline, floorType, level)"],
 		"folderPath": "Revit/Elements/Floor/Create",
 		"inDepth": "ByOutlineTypeAndLevel creates floors from Polycurves. Floors will be dynamically added and removed from the Revit document by adjusting inputs in Dynamo."
 	}, {
 		"Name": "ByOutlineTypeAndLevel (outlineCurves, floorType, level)",
-		"imageFile": ["ByOutlineTypeAndLevel (outlineCurves, floorType, level)"],
+		"imageFile": ["ByOutlineTypeAndLevel (outlineCurves, floorType, level).gif"],
 		"dynFile": ["ByOutlineTypeAndLevel (outlineCurves, floorType, level)"],
 		"folderPath": "Revit/Elements/Floor/Create",
 		"inDepth": "ByOutlineTypeAndLevel creates floors from lists of curves that define outlines. Floors will be dynamically added and removed from the Revit document by adjusting inputs in Dynamo."
@@ -954,7 +954,7 @@
 		"inDepth": "Path returns the full file path of an Import Instance as a string."
 	}, {
 		"Name": "ByElevation",
-		"imageFile": ["ByElevation"],
+		"imageFile": ["ByElevation.gif"],
 		"dynFile": ["ByElevation"],
 		"folderPath": "Revit/Elements/Level/Create",
 		"inDepth": "Revit levels created from Dynamo will be automatically named in Revit based on existing levels."
@@ -1374,7 +1374,7 @@
 		"inDepth": "Reference points are created in the Revit conceptual design environment."
 	}, {
 		"Name": "ByPointVectorDistance",
-		"imageFile": ["ByPointVectorDistance"],
+		"imageFile": ["ByPointVectorDistance.gif"],
 		"dynFile": ["ByPointVectorDistance"],
 		"folderPath": "Revit/Elements/ReferencePoint/Create",
 		"inDepth": "Reference points are created in the Revit conceptual design environment."
@@ -1662,19 +1662,19 @@
 		"inDepth": "Sketch planes are used in the creation of 2D and 3D geometry in Revit."
 	}, {
 		"Name": "BeamByCurve",
-		"imageFile": ["BeamByCurve"],
+		"imageFile": ["BeamByCurve.gif"],
 		"dynFile": ["BeamByCurve"],
 		"folderPath": "Revit/Elements/StructuralFraming/Create",
 		"inDepth": "BeamByCurve creates a beam from curves, associated levels, and a structural framing type. Beams can be updated dynamically and will remain in the Revit file after Dynamo is closed. This node is especially useful for generating extensive and/or non-standard structural models from analytical lines."
 	}, {
 		"Name": "BraceByCurve",
-		"imageFile": ["BraceByCurve"],
+		"imageFile": ["BraceByCurve.gif"],
 		"dynFile": ["BraceByCurve"],
 		"folderPath": "Revit/Elements/StructuralFraming/Create",
 		"inDepth": "BraceByCurve creates a beam from curves, associated levels, and a structural framing type. Braces can be updated dynamically and will remain in the Revit file after Dynamo is closed. This node is especially useful for generating extensive and/or non-standard structural models from analytical lines."
 	}, {
 		"Name": "ColumnByCurve",
-		"imageFile": ["ColumnByCurve"],
+		"imageFile": ["ColumnByCurve.gif"],
 		"dynFile": ["ColumnByCurve"],
 		"folderPath": "Revit/Elements/StructuralFraming/Create",
 		"inDepth": "ColumnByCurve creates a column from curves, associated levels, and a structural framing type. Columns can be updated dynamically and will remain in the Revit file after Dynamo is closed. This node is especially useful for generating extensive and/or non-standard structural models from analytical lines."
@@ -2178,7 +2178,7 @@
 		"inDepth": "Create an Area Plan View at the given Level."
 	}, {
 		"Name": "ByEyePointAndTarget",
-		"imageFile": ["ByEyePointAndTarget"],
+		"imageFile": ["ByEyePointAndTarget.gif"],
 		"dynFile": ["ByEyePointAndTarget"],
 		"folderPath": "Revit/Views/AxonometricView/Create",
 		"inDepth": "Perspective views created from Dynamo will update only by switching to another view and back again. In the example below, the eye point is evaluated at different parameters of a circle to rotate the camera around the model."
@@ -2190,7 +2190,7 @@
 		"inDepth": "Create a Revit Axonometric (isometric) View from an Eye position and target position and Bounding Box."
 	}, {
 		"Name": "ByEyePointTargetAndElement",
-		"imageFile": ["ByEyePointTargetAndElement"],
+		"imageFile": ["ByEyePointTargetAndElement.gif"],
 		"dynFile": ["ByEyePointTargetAndElement"],
 		"folderPath": "Revit/Views/AxonometricView/Create",
 		"inDepth": "ByEyePointTargetAndElement allows you to select and isolate a certain element in the view. This is useful for creating views around specific geometry. Perspective views created from Dynamo will update only by switching to another view and back again."
@@ -2214,7 +2214,7 @@
 		"inDepth": "ByLevel creates a structural floor plan named after its input level."
 	}, {
 		"Name": "ByEyePointAndTarget",
-		"imageFile": ["ByEyePointAndTarget"],
+		"imageFile": ["ByEyePointAndTarget.gif"],
 		"dynFile": ["ByEyePointAndTarget"],
 		"folderPath": "Revit/Views/PerspectiveView/Create",
 		"inDepth": "Perspective views created from Dynamo will update only by switching to another view and back again. In the example below, the eye point is evaluated at different parameters of a circle to rotate the camera around the model."
@@ -2226,7 +2226,7 @@
 		"inDepth": "ByEyePointTargetAndElement allows you to select and isolate a certain element in the view. This is useful for creating views around specific geometry. Perspective views created from Dynamo will update only by switching to another view and back again."
 	}, {
 		"Name": "ByEyePointTargetAndElement",
-		"imageFile": ["ByEyePointTargetAndElement"],
+		"imageFile": ["ByEyePointTargetAndElement.gif"],
 		"dynFile": ["ByEyePointTargetAndElement"],
 		"folderPath": "Revit/Views/PerspectiveView/Create",
 		"inDepth": "ByEyePointTargetAndElement allows you to select and isolate a certain element in the view. This is useful for creating views around specific geometry. Perspective views created from Dynamo will update only by switching to another view and back again."
