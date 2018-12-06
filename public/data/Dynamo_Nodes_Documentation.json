@@ -60,7 +60,7 @@
     "inDepth": "ByARGB will create a color using input Alpha, Red, Green, and Blue values. The input values are in the range 0 to 255. In the example below, we use 4 number sliders set to the range 0 to 255 to control the input values of a ByARGB node. A Display.ByGeometryColor node is used with a default cuboid in order to visualize the resulting color."
 }, {
     "Name": "Color Palette",
-    "imageFile": ["Color Palette"],
+    "imageFile": ["Color Palette.gif"],
     "dynFile": ["Color Palette"],
     "folderPath": "Display/Color/Create",
     "inDepth": "The color palette provides a nice UI to pick colors for use within Dynamo. (Kudos to Adam Sheather of the Bad Monkeys for this one."
@@ -4134,7 +4134,7 @@
     "inDepth": "LoopWhile will return the result of a looped function until the constraints are met. In the example below, a simple loop is created to add 10, starting with 1, until the result is larger than 100. loopWhile accepts variables for its init input and functions for the continueWhile and loopBody inputs. continueWhile defines the constraints of the loop, which in this example is a < function and an argument of 100. loopBody defines what the loop does, which in this example is an + function with an argument of 10."
 }, {
     "Name": "Pause",
-    "imageFile": ["Pause"],
+    "imageFile": ["Pause.gif"],
     "dynFile": ["Pause"],
     "folderPath": "Script/Control Flow/Action",
     "inDepth": "Pause will return the result of a node after pausing the thread for a specified amount of time. In the example below, a circle is extruded into a surface 5 seconds after the thread is run. To use the time delay, the program should be run in Manual."
