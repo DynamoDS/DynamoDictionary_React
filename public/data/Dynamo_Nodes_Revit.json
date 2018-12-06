@@ -651,7 +651,7 @@
 		"imageFile": ["ByCoordinates.gif"],
 		"dynFile": ["ByCoordinates"],
 		"folderPath": "Revit/Elements/FamilyInstance/Create",
-		"inDepth": "Reference points are created in the Revit conceptual design environment."
+		"inDepth": "Place a family instance given the X,Y,Z coordinates."
 	}, {
 		"Name": "ByFace (familyType, face, line)",
 		"imageFile": ["ByFace (familyType, face, line)"],
@@ -669,7 +669,7 @@
 		"imageFile": ["ByPoint.gif"],
 		"dynFile": ["ByPoint"],
 		"folderPath": "Revit/Elements/FamilyInstance/Create",
-		"inDepth": "Reference points are created in the Revit conceptual design environment."
+		"inDepth": "Place a family instance given a point."
 	}, {
 		"Name": "ByPointAndLevel",
 		"imageFile": ["ByPointAndLevel.gif"],
@@ -1371,13 +1371,13 @@
 		"imageFile": ["ByPoint"],
 		"dynFile": ["ByPoint"],
 		"folderPath": "Revit/Elements/ReferencePoint/Create",
-		"inDepth": "Reference points are created in the Revit conceptual design environment."
+		"inDepth": "Create a reference point from a Dynamo point. Reference points are created in the Revit conceptual design environment."
 	}, {
 		"Name": "ByPointVectorDistance",
 		"imageFile": ["ByPointVectorDistance.gif"],
 		"dynFile": ["ByPointVectorDistance"],
 		"folderPath": "Revit/Elements/ReferencePoint/Create",
-		"inDepth": "Reference points are created in the Revit conceptual design environment."
+		"inDepth": "Create a reference point by point, vector & distance. Reference points are created in the Revit conceptual design environment."
 	}, {
 		"Name": "Point",
 		"imageFile": ["Point"],
