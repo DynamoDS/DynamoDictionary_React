@@ -63,7 +63,7 @@
     "imageFile": ["Color Palette"],
     "dynFile": ["Color Palette"],
     "folderPath": "Display/Color/Create",
-    "inDepth": ""
+    "inDepth": "The color palette provides a nice UI to pick colors for use within Dynamo. (Kudos to Adam Sheather of the Bad Monkeys for this one."
 }, {
     "Name": "Divide",
     "imageFile": ["Divide"],
@@ -4008,74 +4008,74 @@
     "inDepth": "Xor will accept two boolean values, or two lists of boolean values and determines whether the values are the same or different. Xor compares two values and returns 'true' if exactly one of the inputs is 'true'. If both values are 'true' or if both values are 'false', Xor will return 'false'. In the example below, we start with two lists of boolean values. Together, these lists represent the four possible combinations of true and false values. Notice that unlike And and Or nodes, Xor only allows two values."
 }, {
     "Name": "!=",
-    "imageFile": ["!="],
-    "dynFile": ["!="],
+    "imageFile": ["NotEqualTo"],
+    "dynFile": ["NotEqualTo"],
     "folderPath": "Math/Operators/Action",
     "inDepth": "!= is the Not Equal To operator. It takes two input values and returns true if the two values are not equal to each other and returns false if the two values are equal. In the example below, we use two number sliders to control the inputs to a != operator."
 }, {
     "Name": "%",
-    "imageFile": ["%"],
-    "dynFile": ["%"],
+    "imageFile": ["Modulo"],
+    "dynFile": ["Modulo"],
     "folderPath": "Math/Operators/Action",
     "inDepth": "% is the Modulo operator. It returns the remainder of the x input after being divided by the y input. In the example below, we use two number sliders to control the inputs to a % operator."
 }, {
     "Name": "&&",
-    "imageFile": ["&&"],
-    "dynFile": ["&&"],
+    "imageFile": ["And"],
+    "dynFile": ["And"],
     "folderPath": "Math/Operators/Action",
     "inDepth": "&& is the And operator. It takes two boolean values as input and returns true if both values are true. If one or both values are false, it will return false. In the example below, we use two boolean toggle nodes to control the inputs to the && operator."
 }, {
     "Name": "*",
-    "imageFile": ["*"],
-    "dynFile": ["*"],
+    "imageFile": ["Multiply"],
+    "dynFile": ["Multiply"],
     "folderPath": "Math/Operators/Action",
     "inDepth": "* is the multiplication operator. It will return the product of the two input numbers. In the example below, we use two number sliders to control the inputs to the * operator."
 }, {
     "Name": "+",
-    "imageFile": ["+"],
-    "dynFile": ["+"],
+    "imageFile": ["Add"],
+    "dynFile": ["Add"],
     "folderPath": "Math/Operators/Action",
     "inDepth": "+ is the addition operator. It will return the sum ofy the two input numbers. In the example below, we use two number sliders to control the inputs to the + operator."
 }, {
     "Name": "-",
-    "imageFile": ["-"],
-    "dynFile": ["-"],
+    "imageFile": ["Subtract"],
+    "dynFile": ["Subtract"],
     "folderPath": "Math/Operators/Action",
     "inDepth": "- is the subtraction operator. It will return the result of the y input subtracted from the x input. In the example below, we use two number sliders to control the inputs to the - operator."
 }, {
     "Name": "/",
-    "imageFile": ["/"],
-    "dynFile": ["/"],
+    "imageFile": ["Divide"],
+    "dynFile": ["Divide"],
     "folderPath": "Math/Operators/Action",
     "inDepth": "/ is the division operator. It will return the result of the x input divided by the y input. In the example below, we use two number sliders to control the inputs to the / operator."
 }, {
     "Name": "<",
-    "imageFile": ["<"],
-    "dynFile": ["<"],
+    "imageFile": ["LessThan"],
+    "dynFile": ["LessThan"],
     "folderPath": "Math/Operators/Action",
     "inDepth": "< is the Less Than operator. If the x input is less than the y input, it will return true. If x is greater than y, or if the two value are equal, this operator will return false. In the example below, we use two number sliders to control the inputs to the < operator."
 }, {
     "Name": "<=",
-    "imageFile": ["<="],
-    "dynFile": ["<="],
+    "imageFile": ["LessThanOrEqualTo"],
+    "dynFile": ["LessThanOrEqualTo"],
     "folderPath": "Math/Operators/Action",
     "inDepth": "<= is the Less Than Or Equal To operator. If the x input is less than the y input, or if the two values are equal, it will return true. If x is greater than y, this operator will return false. In the example below, we use two number sliders to control the inputs to the <= operator."
 }, {
     "Name": "==",
-    "imageFile": ["=="],
-    "dynFile": ["=="],
+    "imageFile": ["EqualTo"],
+    "dynFile": ["EqualTo"],
     "folderPath": "Math/Operators/Action",
     "inDepth": "== is the Equal To operator. If the x input is equal to the y input, it will return true. If the two values are not equal, this operator will return false. In the example below, we use two number sliders to control the inputs to the == operator."
 }, {
     "Name": ">",
-    "imageFile": [">"],
-    "dynFile": [">"],
+    "imageFile": ["GreaterThan"],
+    "dynFile": ["GreaterThan"],
     "folderPath": "Math/Operators/Action",
     "inDepth": "> is the Greater Than operator. If the x input is greater than the y input, it will return true. If x is less than y, or if the two value are equal, this operator will return false. In the example below, we use two number sliders to control the inputs to the > operator."
 }, {
     "Name": ">=",
-    "imageFile": [">="],
-    "dynFile": [">="],
+    "imageFile": ["GreaterThanOrEqualTo"],
+    "dynFile": ["GreaterThanOrEqualTo"],
     "folderPath": "Math/Operators/Action",
     "inDepth": ">= is the Greater Than Or Equal To operator. If the x input is greater than the y input, or if the two values are equal, it will return true. If x is less than y, this operator will return false. In the example below, we use two number sliders to control the inputs to the >= operator."
 }, {
@@ -4086,8 +4086,8 @@
     "inDepth": "Not (also written as exclamation point) will return the opposite of an input boolean value. In the example below, we use a boolean toggle node as the input to a Not operator."
 }, {
     "Name": "||",
-    "imageFile": ["||"],
-    "dynFile": ["||"],
+    "imageFile": ["Or"],
+    "dynFile": ["Or"],
     "folderPath": "Math/Operators/Action",
     "inDepth": "|| is the Or operator. It takes two boolean values as input and returns true if one or both values are true. If both values are false, it will return false. In the example below, we use two boolean toggle nodes to control the inputs to the || operator."
 }, {

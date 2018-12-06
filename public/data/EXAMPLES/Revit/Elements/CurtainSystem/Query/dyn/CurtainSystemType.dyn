@@ -1,0 +1,164 @@
+{
+  "Uuid": "b4a5c3d0-2dfe-4fd2-9e1a-3d2255c8d096",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "CurtainSystemType",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.CurtainSystem.CurtainSystemType",
+      "Id": "1cd4db1c582c4956ab1e9133e0426110",
+      "Inputs": [
+        {
+          "Id": "05b7d46540e24e93b7c78a672ddb7dc7",
+          "Name": "curtainSystem",
+          "Description": "Revit.Elements.CurtainSystem",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "94a061a8bfd7459590e5826c745839bc",
+          "Name": "CurtainSystemType",
+          "Description": "CurtainSystemType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get CurtainSystemType\n\nCurtainSystem.CurtainSystemType: CurtainSystemType"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 145,
+      "NodeType": "ExtensionNode",
+      "Id": "6098173dc16c4e769af7f450ecced5b8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "188fadf32eef40d98fb4255bf7e93321",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "1c366270801d439e9739d23c72d00663",
+      "Inputs": [
+        {
+          "Id": "3bfcdd6196dc4fe48626c37930da5f13",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e866984abaa5488582967c547a84f7d1",
+          "Name": "Elements",
+          "Description": "An element type.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "188fadf32eef40d98fb4255bf7e93321",
+      "End": "3bfcdd6196dc4fe48626c37930da5f13",
+      "Id": "321cdeddf2494125a282e2794e22f823"
+    },
+    {
+      "Start": "e866984abaa5488582967c547a84f7d1",
+      "End": "05b7d46540e24e93b7c78a672ddb7dc7",
+      "Id": "74c49763562246ed809adf09f4f08dbb"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "CurtainSystem.CurtainSystemType",
+        "Id": "1cd4db1c582c4956ab1e9133e0426110",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 733.0,
+        "Y": 304.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Categories",
+        "Id": "6098173dc16c4e769af7f450ecced5b8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 323.0,
+        "Y": 304.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "All Elements of Category",
+        "Id": "1c366270801d439e9739d23c72d00663",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 534.0,
+        "Y": 304.0
+      }
+    ],
+    "Annotations": [],
+    "X": -407.77811658060659,
+    "Y": -183.20860691174556,
+    "Zoom": 1.545620359375
+  }
+}

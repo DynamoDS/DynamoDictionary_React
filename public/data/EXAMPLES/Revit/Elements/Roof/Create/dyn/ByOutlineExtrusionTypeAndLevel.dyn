@@ -1,0 +1,129 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "ByOutlineExtrusionTypeAndLevel",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Roof.ByOutlineExtrusionTypeAndLevel@Autodesk.DesignScript.Geometry.PolyCurve,Revit.Elements.RoofType,Revit.Elements.Level,Revit.Elements.ReferencePlane,double,double",
+      "Id": "1ac08d6ac9b244e1b871d1a2c5aaed7f",
+      "Inputs": [
+        {
+          "Id": "c689cddbd55a4483a11fe8df4331fbb6",
+          "Name": "outline",
+          "Description": "PolyCurve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7416ef846dac4a10a598aa19f5b91480",
+          "Name": "roofType",
+          "Description": "RoofType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8ee8a4472fe44928b707132c2a000739",
+          "Name": "level",
+          "Description": "Level",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4076ec83e621499d9b0e02b662bae64c",
+          "Name": "plane",
+          "Description": "ReferencePlane",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bbc9c544ccf246638979084666103ccf",
+          "Name": "extrusionStart",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8ba4b72f9eef42bda1da0b6dc27d087e",
+          "Name": "extrusionEnd",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ee0583fd7a8d46688ff1de0b9a736f28",
+          "Name": "Roof",
+          "Description": "Roof",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Extrude Roof by Outline, Referenceplane\n\nRoof.ByOutlineExtrusionTypeAndLevel (outline: PolyCurve, roofType: RoofType, level: Level, plane: ReferencePlane, extrusionStart: double, extrusionEnd: double): Roof"
+    }
+  ],
+  "Connectors": [],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Roof.ByOutlineExtrusionTypeAndLevel",
+        "Id": "1ac08d6ac9b244e1b871d1a2c5aaed7f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1048.1735917578437,
+        "Y": 267.64122943033294
+      }
+    ],
+    "Annotations": [],
+    "X": -1246.0006180504297,
+    "Y": -92.038393770928053,
+    "Zoom": 1.7039168245549956
+  }
+}
