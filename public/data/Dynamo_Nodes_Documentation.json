@@ -1056,8 +1056,8 @@
     "inDepth": "Parameter at Point will return the parameter value of a specified point along a curve. If the input point is not on the curve, Parameter At Point will return the parameter of the point on the curve closes to the input point. In the example below, we first create a Nurbs Curve using a ByControlPoints node, with a set of randomly generated points as the input. An extra single point is created with a Code Block to specify the x and y coordinates. The ParameterAtPoint node returns the parameter along the curve at the point that is closest to the input point."
 }, {
     "Name": "ParameterAtSegmentLength",
-    "imageFile": ["ParameterAtSegmentLength"],
-    "dynFile": ["ParameterAtSegmentLength"],
+    "imageFile": ["ParameterAtSegmentLength", "ParameterAtSegmentLength - Ex 2"],
+    "dynFile": ["ParameterAtSegmentLength", "ParameterAtSegmentLength - Ex 2"],
     "folderPath": "Geometry/Curves/Curve/Action",
     "inDepth": "Parameter At Segment Length will return the parameter of a point that is a given length along the curve from the start point. In the example below, we first create a Nurbs Curve using a ByControlPoints node, with a set of randomly generated points as the input. A number slider is used to control the segment length to find a parameter at. If the input segment length is longer than the curve, this node will return the parameter value of the end point of the curve."
 }, {
@@ -1968,8 +1968,8 @@
     "inDepth": "ByCoordinates (x, y, z) will return a Vector from X, Y, and Z coordinates. The input coordinate location defines the Vector's position and length. In the example below, a Vector is returned from a coordinate location of (1,0,1) and is represented as a Line."
 }, {
     "Name": "ByCoordinates (x, y)",
-    "imageFile": ["ByCoordinates (x, y)"],
-    "dynFile": ["ByCoordinates (x, y)"],
+    "imageFile": ["ByCoordinates (x, y)", "ByCoordinates_crossReference"],
+    "dynFile": ["ByCoordinates (x, y)", "ByCoordinates_crossReference"],
     "folderPath": "Geometry/Points/Point/Create",
     "inDepth": "The Point By Coordinates (XY) calls for two number inputs and generates a point on the Dynamo base plane.  In the first example,  we are using two sliders to dynamically control the point’s X and Y location on the Z-plane. In the second, we are using two Number Sliders and a Code Block Range to determine the maximum extents of the grid and the spacing between points. By changing the Points By Coordinates lacing to Cross-Reference, we can create multi-dimensional set of points along the X and Y axis."
 }, {
@@ -4014,8 +4014,8 @@
     "inDepth": "!= is the Not Equal To operator. It takes two input values and returns true if the two values are not equal to each other and returns false if the two values are equal. In the example below, we use two number sliders to control the inputs to a != operator."
 }, {
     "Name": "%",
-    "imageFile": ["Modulo"],
-    "dynFile": ["Modulo"],
+    "imageFile": ["Modulo", "Modulo - Ex 2"],
+    "dynFile": ["Modulo", "Modulo - Ex 2"],
     "folderPath": "Math/Operators/Action",
     "inDepth": "% is the Modulo operator. It returns the remainder of the x input after being divided by the y input. In the example below, we use two number sliders to control the inputs to a % operator."
 }, {
@@ -4122,8 +4122,8 @@
     "inDepth": "Select a unit of measurement."
 }, {
     "Name": "If",
-    "imageFile": ["If"],
-    "dynFile": ["If"],
+    "imageFile": ["If", "If - Ex 2"],
+    "dynFile": ["If", "If - Ex 2"],
     "folderPath": "Script/Control Flow/Action",
     "inDepth": "If acts as a conditional control node. The 'test' input takes a boolean value, while the 'true' and 'false' inputs can accept any data type. If the test value is 'true', the node will return the item from the 'true' input, if test is 'false', the node will return the item from the 'false' input. In the example below, we first generate a list of random numbers between zero and 99. The number of items in the list is controlled by an integer slider. We use a code block with the formula 'x%a==0' to test for divisibility by a second number, determined by a second number slider. This generates a list of boolean values corresponding to whether the items in the random list are divisible by the number determined by the second integer slider. This list of boolean values is used as the 'test' input for an If node. We use a default Sphere as the 'true' input, and a default Cuboid as the 'false' input. The result from the If node is a list of either spheres or cuboids. Finally, we use a Translate node to spread the list of geometries apart.\n\nIF replicates on all nodes AS THOUGH SET TO SHORTEST. You can see the reason for this in the attached examples, especially when looking at what the results are when LONGEST is applied to a formula node and the \"short\" branch of the conditional is passes through. These changes were also made to allow predictable behavior when using single boolean inputs or a list of booleans."
 }, {
