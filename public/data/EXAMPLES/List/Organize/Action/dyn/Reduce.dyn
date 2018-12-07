@@ -1,7 +1,7 @@
 {
-  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "Uuid": "a7144dee-0c0a-413f-9e6f-983d44b38ffd",
   "IsCustomNode": false,
-  "Description": "",
+  "Description": null,
   "Name": "Reduce",
   "ElementResolver": {
     "ResolutionMap": {}
@@ -13,10 +13,10 @@
       "ConcreteType": "CoreNodeModels.HigherOrder.Reduce, CoreNodeModels",
       "VariableInputPorts": true,
       "NodeType": "ExtensionNode",
-      "Id": "3c6a19a458f34e97b74d78ce3d66ee1d",
+      "Id": "ac175d6bf132461584690acaa6ffb00a",
       "Inputs": [
         {
-          "Id": "c7fa4072388242f3b01033832f36af5c",
+          "Id": "4f8723fe61c744a291d4ea8dc6dd95a8",
           "Name": "reductor",
           "Description": "Reductor Function: accepts one item from each list being reduced, and the current accumulated value, result is the new accumulated value.",
           "UsingDefaultValue": false,
@@ -25,7 +25,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "31458c12cfc349c9b81d452915c321a0",
+          "Id": "ed3e3d48603840fa973568d242487e9c",
           "Name": "seed",
           "Description": "Starting accumulated value, to be passed into the first call to the Reductor function.",
           "UsingDefaultValue": false,
@@ -34,7 +34,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "280ca63b08c049f9b89c8facfa5a23ed",
+          "Id": "663c8a5213204a8cb17ce931923c3f46",
           "Name": "list1",
           "Description": "List #1",
           "UsingDefaultValue": false,
@@ -45,7 +45,7 @@
       ],
       "Outputs": [
         {
-          "Id": "e6e0f7dae9c747c6b785e775acca5495",
+          "Id": "fbf04f211cac4006a86f0487076d0a4e",
           "Name": "reduced",
           "Description": "Reduced lists",
           "UsingDefaultValue": false,
@@ -56,9 +56,93 @@
       ],
       "Replication": "Disabled",
       "Description": "Reduces a list into a new value by combining each element with an accumulated result."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "2;\n1..4;",
+      "Id": "d284bd6d273a4a2d9ed9e738e544f321",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3ecec8e5199f4d8f88e277897cfaaedd",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5c3a8a14a9314b138968df5090f147ec",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "-@var[]..[],var[]..[]",
+      "Id": "cbf624563f8f4fd1a83d921459a5ab1b",
+      "Inputs": [
+        {
+          "Id": "f5b547d3006c44c9b52691175dc0f16a",
+          "Name": "x",
+          "Description": "x value.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3c2596d749694ecdaeaafcf6ea2940e1",
+          "Name": "y",
+          "Description": "y value.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e89d64f5000a4037b79f56098edf838d",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "x subtract y.\n\n- (x: var[]..[], y: var[]..[]): var[]..[]"
     }
   ],
-  "Connectors": [],
+  "Connectors": [
+    {
+      "Start": "3ecec8e5199f4d8f88e277897cfaaedd",
+      "End": "ed3e3d48603840fa973568d242487e9c",
+      "Id": "8d7a9794c88a4a25be273d210bb3b874"
+    },
+    {
+      "Start": "5c3a8a14a9314b138968df5090f147ec",
+      "End": "663c8a5213204a8cb17ce931923c3f46",
+      "Id": "fa2aa87efa1641aebd0497288fd53d3f"
+    },
+    {
+      "Start": "e89d64f5000a4037b79f56098edf838d",
+      "End": "4f8723fe61c744a291d4ea8dc6dd95a8",
+      "Id": "14b646d082d44aaf9f2092151ad8ef01"
+    }
+  ],
   "Dependencies": [],
   "Bindings": [],
   "View": {
@@ -86,12 +170,32 @@
       {
         "ShowGeometry": true,
         "Name": "List.Reduce",
-        "Id": "3c6a19a458f34e97b74d78ce3d66ee1d",
+        "Id": "ac175d6bf132461584690acaa6ffb00a",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 670.0,
-        "Y": 223.0
+        "X": 380.0,
+        "Y": 398.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "d284bd6d273a4a2d9ed9e738e544f321",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 218.0,
+        "Y": 460.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "-",
+        "Id": "cbf624563f8f4fd1a83d921459a5ab1b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 125.0,
+        "Y": 338.0
       }
     ],
     "Annotations": [],

@@ -2082,10 +2082,10 @@
 		"inDepth": "Levels contains a drop-down menu with every level available in a document."
 	}, {
 		"Name": "Select Divided Surface Families",
-		"imageFile": ["Select Divided Surface Families"],
+		"imageFile": ["Select Divided Surface Families.gif"],
 		"dynFile": ["Select Divided Surface Families"],
 		"folderPath": "Revit/Selection/Action",
-		"inDepth": "Select a divided surface and get its family instances."
+		"inDepth": "Select a divided surface and get its family instances. This node is to be used in the massing/adaptive family environment."
 	}, {
 		"Name": "Select Edge",
 		"imageFile": ["Select Edge"],
