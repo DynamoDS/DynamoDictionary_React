@@ -1,0 +1,58 @@
+[
+	{
+	  "Name": "Operation Failed",
+	  "Description": "Operation failed error",
+	  "inDepth": "",
+
+	  "Categories": ["CommonErrorMessages"],
+	  "Group": "ScriptingErrors",
+	  "RouteName": "OperationFailed",
+	  
+	  "SmallIcon": "",
+	  "LargeIcon": ""
+	}, {
+	  "Name": "Deprecated",
+	  "Description": "Deprecated error",
+	  "inDepth": "",
+
+	  "Categories": ["CommonErrorMessages"],
+	  "Group": "ScriptingErrors",
+	  "RouteName": "Deprecated",
+	  
+	  "SmallIcon": "",
+	  "LargeIcon": ""
+	}, {
+	  "Name": "Index Out of Range",
+	  "Description": "Index out of range error",
+	  "inDepth": "",
+
+	  "Categories": ["CommonErrorMessages"],
+	  "Group": "ScriptingErrors",
+	  "RouteName": "IndexOutOfRange",
+	  
+	  "SmallIcon": "",
+	  "LargeIcon": ""
+	}, {
+	  "Name": "Method Not Found",
+	  "Description": "Method not found error",
+	  "inDepth": "",
+
+	  "Categories": ["CommonErrorMessages"],
+	  "Group": "ScriptingErrors",
+	  "RouteName": "MethodNotFound",
+	  
+	  "SmallIcon": "",
+	  "LargeIcon": ""
+	}, {
+	  "Name": "Unhandled Exception",
+	  "Description": "Unhandled exception error",
+	  "inDepth": "",
+
+	  "Categories": ["CommonErrorMessages"],
+	  "Group": "ScriptingErrors",
+	  "RouteName": "UnhandledException",
+	  
+	  "SmallIcon": "",
+	  "LargeIcon": ""
+	}
+]

@@ -10,7 +10,7 @@ const buttonStyle = {
 const sections = [
     {
         name: 'Scripting Errors',
-        path: 'ScriptingErrors',
+        path: 'CommonErrorMessages/ScriptingErrors',
         children: [
             {
                 name: 'Operation Failed',
@@ -36,7 +36,7 @@ const sections = [
     },
     {
         name: 'Other Errors',
-        path: 'OtherErrors',
+        path: 'CommonErrorMessages/OtherErrors',
         children: [
             {
                 name: 'Custom Node Not Loaded',
@@ -62,17 +62,19 @@ const sections = [
     }
 ];
 
+const basePath = "CommonErrorMessages";
+const pathIsActive = (currentPath, itemPath) => currentPath.includes(itemPath);
+
 class CommonErrorMessagesSection extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { isActive: this.props.isActive };
-        
+        this.state = {isActive: pathIsActive(this.props.path, this.props.section.path) };   
     }
 
     componentDidMount() {
         this.unlisten = browserHistory.listen(location =>  {
-            this.setState({isActive: location.hash.includes(this.props.section.path)});
+            this.setState({isActive: pathIsActive(location.hash, this.props.section.path)});
         });
     }
 
@@ -82,27 +84,33 @@ class CommonErrorMessagesSection extends React.Component {
 
     render() {
 
-        const classes = classNames('button', 'accordion', 'button2', 
+        const groupClasses = classNames('button', 'accordion', 'button2', 
             {'active': this.state.isActive})
 
         return (
             <div>
                 <button 
-                    className={classes} 
+                    className={groupClasses} 
                     style={buttonStyle}
-                    onClick={() => this.setState({ isActive: !this.state.isActive })}>
+                    onClick={() => hashHistory.push(this.props.section.path)}>
                     {this.props.section.name}
                 </button> 
                 {this.state.isActive ? (<div>
-                    { this.props.section.children.map((item, i) => 
-                        <div key={i}> 
+                    { this.props.section.children.map((item, i) => {
+
+                        const buttonClasses = classNames('button', 'accordion', 'button4',
+                            {'active': pathIsActive(this.props.path, item.route)})
+
+                        return (<div key={i}> 
                             <button 
-                                className={'button accordion button3'} 
+                                className={buttonClasses} 
                                 style={buttonStyle}
                                 onClick={() => hashHistory.push(item.route)}>
                                 {item.name}
                             </button>
-                        </div>) }
+                        </div>)
+                    })
+                }
                 </div>) : null
                 }
             </div>
@@ -110,16 +118,17 @@ class CommonErrorMessagesSection extends React.Component {
     }
 }
 
+
 class CommonErrorMessagesButton extends React.Component {
   
   constructor(props) {
     super(props);
-    this.state = { isActive: props.location.pathname.includes('CommonErrorMessages') };
+    this.state = { isActive: pathIsActive(props.location.pathname, basePath) };
   }
 
   componentDidMount() {
     this.unlisten = browserHistory.listen(location =>  {
-        this.setState({isActive: location.hash.includes('CommonErrorMessages')});
+        this.setState({isActive: pathIsActive(location.hash, basePath)});
     });
   }
 
@@ -128,21 +137,21 @@ class CommonErrorMessagesButton extends React.Component {
   }
 
   render() {
-    const classes = classNames('button', 'accordion', 'button1', {'active': this.state.isActive})
+    const classes = classNames('button', 'accordion', 'button1', 
+        {'active': this.state.isActive})
 
     return (
         <div>
             <button 
                 className={classes} 
                 style={buttonStyle}
-                onClick={() => this.setState({ isActive: !this.state.isActive })}>
+                onClick={() => hashHistory.push(basePath)}>
                 Common Error Messages
             </button> 
             {this.state.isActive ? 
                 (<div>
                     { sections.map((item, i) => <CommonErrorMessagesSection 
-                        key={i} section={item} 
-                        isActive={this.props.location.pathname.includes(item.path)}/>) }
+                        key={i} section={item} path={this.props.location.pathname}/>) }
                 </div>) 
                 : null
             }

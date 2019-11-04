@@ -1,0 +1,39 @@
+<body style="background-color:#353535;"></body>
+<style>
+    .white {
+    color:whitesmoke;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+</style>
+<div class="white">
+    <section id="PropertyCouldntBeFound">
+        <h2>Property Couldn't Be Found</h2>
+        <p>
+            <var>No property called {variable??} on {variable??} could be found</var>.
+            This warning happens if the node you are using are trying to get a property
+            from an object that dosen't have that property.
+            <p></p>
+            Properties are values stored in an object, e.g. in Dynamo a Point is an object 
+            so is a Line, both of these objects have different properties associated with them. 
+            A Point object has an X, Y and Z property that holds the value has the coordinate
+            values of the point. A Line object has different properties like Length which has the
+            length of the line, the Line object does not have the X, Y and Z property that the Point
+            does and the Point does not have the Length property that the Line does.
+            <p></p>
+            This error will therfore occur if you try to call a specefic property on an object that doesn't 
+            have that property. If you for example called Length on a Point you would get a
+            <var>No property called Length on Point could be found</var>, as the Point does not
+            contain the property Length.
+        </p>
+
+        <h2>How To Fix</h2>
+        <p>
+            Make sure you're input is of the right type of object.
+        </p>
+
+        <h4>More Information</h4>
+
+        <p>To find out more, please check <a href="https://forum.dynamobim.com/search?q=No%20property%20called"><span style="text-decoration: underline;">posts on the Dynamobim forum</span></a> discussing "<strong>Property Couldn't Be Found</strong>".</p>
+
+    </section>
+</div>

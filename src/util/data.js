@@ -1,4 +1,6 @@
 import { flatten, flattenHierarchy } from "./array";
+import errorsArray from '../../public/data/Dynamo_Error_Messages';
+
 
 export const addOverload = node => {
   node.RouteName =
@@ -32,6 +34,7 @@ export const createSearchArray = (hierarchy, mainExamples, newExamples) => {
       d.Name = d.TempName;
     }
   });
+  
   const combinedArray = [...mainExamples, ...newExamples];
   combinedArray.forEach(d => {
     searchArray.forEach(e => {
@@ -45,5 +48,6 @@ export const createSearchArray = (hierarchy, mainExamples, newExamples) => {
       }
     });
   });
-  return searchArray;
+
+  return searchArray.concat(errorsArray);
 };

@@ -13,6 +13,8 @@ import ErrorPropertyOfClassNotFoundHTML from './error_pages/kPropertyOfClassNotF
 import ErrorRunCompletedWithWarningsHTML from './error_pages/RunCompletedWithWarningsMessage.html'
 import ErrorExcelNotInstalledHTML from './error_pages/ExcelNotInstalled.html'
 
+import CommonErrorMessagesHTML from './error_pages/CommonErrorMessages.html'
+
 
 const containerStyle = {
 	padding: 20
@@ -42,7 +44,7 @@ const contentSwitch = function(path) {
 	} else if (path.endsWith('ExcelNotInstalled')) {
 		return ErrorExcelNotInstalledHTML
 	} else {
-	 	return ErrorOperationFailedHTML
+	 	return CommonErrorMessagesHTML
 	}
 }
 

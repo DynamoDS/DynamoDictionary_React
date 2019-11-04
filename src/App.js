@@ -4,6 +4,7 @@ import { hashHistory } from "react-router";
 import "./css/font.css";
 import "./css/style.css";
 
+import CommonErrorMessagesButton from "./components/CommonErrorMessagesButton";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Branch from "./components/Branch";
@@ -237,6 +238,8 @@ class App extends Component {
                           iteration={0}
                           routePush={this._routePush}
                         />
+                        <hr />
+                        <CommonErrorMessagesButton />
                       </ul>
                       <br />
                       <br />
