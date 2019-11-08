@@ -1,6 +1,5 @@
 import { flatten, flattenHierarchy } from "./array";
-import errorsArray from '../../public/data/Dynamo_Error_Messages';
-
+// import errorSectionItems from '../../public/data/Dynamo_Error_Messages';
 
 export const addOverload = node => {
   node.RouteName =
@@ -17,7 +16,7 @@ export const addOverload = node => {
     ")";
 };
 
-export const createSearchArray = (hierarchy, mainExamples, newExamples) => {
+export const createSearchArray = (hierarchy, mainExamples, newExamples, errorSectionItems) => {
   let searchArray = flatten(hierarchy.map(d => flattenHierarchy(d)));
   searchArray.forEach((d, i) => {
     d.ogName = d.Name;
@@ -49,5 +48,26 @@ export const createSearchArray = (hierarchy, mainExamples, newExamples) => {
     });
   });
 
-  return searchArray.concat(errorsArray);
+  // flattens the error message sections into a single array containing
+  // items formatted for the search functionality
+  const formatSearchItem = (section, message) => {
+    return {
+      Name: message.name,
+      Description: message.description,
+      inDepth: "",
+
+      Categories: ["CommonErrorMessages"],
+      Group: section,
+      RouteName: message.id,
+      
+      SmallIcon: "",
+      LargeIcon: ""
+    }
+  }
+
+  const errorSearchItems = [].concat.apply([], errorSectionItems.map((section) => {
+      return section.children.map((message) => formatSearchItem(section.id, message));
+  }));
+
+  return searchArray.concat(errorSearchItems);
 };

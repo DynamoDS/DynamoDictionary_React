@@ -182,7 +182,7 @@ class App extends Component {
   render() {
     const isLarge = window.innerWidth > this.state.minWidth;
     const ratio = this.props.sidebarOpen && isLarge ? 0.3 : 0;
-
+    
     return this.props.route !== ""
       ? <div className="App">
           {" "}<Header

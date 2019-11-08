@@ -11,13 +11,13 @@ export const loadHierarchy = () => {
   return dispatch => {
     data
       .then((res, rej) => {
-        const [mainXml, mainExamples, newExamples] = res;
+        const [mainXml, mainExamples, newExamples, errorMessages] = res;
         let dynLib = xmlToJson(mainXml);
         let hierarchy = createObject(dynLib);
         dispatch(
           updateHierarchy({
             hierarchy,
-            searchArray: createSearchArray(hierarchy, mainExamples, newExamples)
+            searchArray: createSearchArray(hierarchy, mainExamples, newExamples, errorMessages)
           })
         );
       })
