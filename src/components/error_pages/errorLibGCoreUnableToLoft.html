@@ -32,13 +32,18 @@ a {
 <!-- and custom styling in Dynamo sidepanel. -->
 <body style="background-color: #353535; font-family: 'Artifakt Element', 'Open Sans';">
 
-<h2>Unhandled exception</h2>
-<p>This error message typically means that there is a bug in Dynamo code which is causing Dynamo to crash. This is not necessarily related to your graph (or one of the packages you are using) and <a href="https://github.com/DynamoDS/Dynamo/blob/master/CONTRIBUTING.md#filing-issues"><span>submitting a bug report</span></a> can help Dynamo developers fix these issues in a later release. </p>
+<h2>Unable to loft</h2>
+<p>This warning means you are trying to do something that Loft will not be able to do. In most cases this warning is followed by a more specific messages that should tell you more about the reason for the warning.</p>
 
 <h4>How to fix</h4>
-<p>Saving your work, restarting Dynamo and re-loading your file can help you recover from these errors. In addition, you can try updating Dynamo and the Dynamo packages you are using on your computer to their latest versions, which might already include fixes for the issues you are facing. If you can identify which package is causing issues, you can also contact the package author directly for more information. </p>
+<p>Some of the general reasons this warning could happen is: 
+<ul>
+    <li>You are trying to create a lofted shape between a single profile to two profiles.</li>
+    <li>Your profiles aren’t closed curves.</li>
+</ul>
+ </p>
 
 <h4>More information</h4>
-<p>To find out more, please check <a href="https://forum.dynamobim.com/search?q=unhandled%20exception"><span> posts on the Dynamobim forum discussing "<strong>unhandled exception</strong>"</span></a>.</p>
+<p>To find out more, please check <a href="https://forum.dynamobim.com/search?q=unable%20to%20loft"><span> posts on the Dynamobim forum discussing "<strong>unable to loft</strong>"</span></a>.</p>
 
 </body>

@@ -1,39 +1,48 @@
-<body style="background-color:#353535;"></body>
+<!-- 
+    There are two versions of this HTML file. One that is part of the Dynamo Dictionary 
+    codebase and one that is part of the Dynamo codebase, used for displaying additional
+    error information in the Dynamo side panel.  
+    
+    These files need to kept in sync manually: if making edits to one version of the file,
+    make sure to update the other version as well.
+
+    Dynamo: https://github.com/DynamoDS/Dynamo
+    Dynamo Dictionary: https://github.com/DynamoDS/DynamoDictionary_React
+-->
+
 <style>
-    .white {
-    color:whitesmoke;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
+@font-face {
+    font-family: "Artifakt Element";
+    src: url("fonts/ArtifaktElement-Regular.woff") format("woff");
+}
+
+body {
+    color: white;
+    font-size: 13px;
+}
+
+a {
+    color: lightgray;
+    cursor: pointer;
+    background-color: transparent;
+}
 </style>
-<div class="white">
-    <section id="PropertyCouldntBeFound">
-        <h2>Property Couldn't Be Found</h2>
-        <p>
-            <var>No property called {variable??} on {variable??} could be found</var>.
-            This warning happens if the node you are using are trying to get a property
-            from an object that dosen't have that property.
-            <p></p>
-            Properties are values stored in an object, e.g. in Dynamo a Point is an object 
-            so is a Line, both of these objects have different properties associated with them. 
-            A Point object has an X, Y and Z property that holds the value has the coordinate
-            values of the point. A Line object has different properties like Length which has the
-            length of the line, the Line object does not have the X, Y and Z property that the Point
-            does and the Point does not have the Length property that the Line does.
-            <p></p>
-            This error will therfore occur if you try to call a specefic property on an object that doesn't 
-            have that property. If you for example called Length on a Point you would get a
-            <var>No property called Length on Point could be found</var>, as the Point does not
-            contain the property Length.
-        </p>
 
-        <h2>How To Fix</h2>
-        <p>
-            Make sure you're input is of the right type of object.
-        </p>
+<!-- Use inline styles to keep Dynamo Dictionary styling in the dictionary -->
+<!-- and custom styling in Dynamo sidepanel. -->
+<body style="background-color: #353535; font-family: 'Artifakt Element', 'Open Sans';">
 
-        <h4>More Information</h4>
+<h2>No property could be found</h2>
+<p>This error message indicates that in the node you are using, you are trying to access a property on an object that does not have that property. </p>
 
-        <p>To find out more, please check <a href="https://forum.dynamobim.com/search?q=No%20property%20called"><span style="text-decoration: underline;">posts on the Dynamobim forum</span></a> discussing "<strong>Property Couldn't Be Found</strong>".</p>
+<p>Properties are values stored in an object. For example, in Dynamo a point object has properties X, Y and Z which represent coordinate values of that given point. A line object has different properties like Length which represents the length of the given line. The line object does not have the <code>X</code>, <code>Y</code> and <code>Z</code> property that the point object does, and the point object does not have the Length property that the line object does.</p>
 
-    </section>
-</div>
+<p>This error will therefore occur if you try to access a specific property on an object that does not have that property. If you for example try to access the Length property on the point object, you would get a <code>“No property called Length on Point could be found”</code>, as the point object does not contain the property Length.  </p>
+
+<h4>How to fix</h4>
+<p>Make sure the object you are using as input to your node has the property you are trying to access.</p>
+
+<h4>More information</h4>
+<p>To find out more, please check <a href="https://forum.dynamobim.com/search?q=no%20property%20called%20could%20be%20found"><span> posts on the Dynamobim forum discussing "<strong>no property called could be found</strong>"</span></a>.</p>
+
+</body>
