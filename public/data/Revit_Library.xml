@@ -25642,6 +25642,35 @@
 						Revit.Elements.Element
 					</FullCategoryName>
 					<Name>
+						AreJoined
+					</Name>
+					<Group>
+						Action
+					</Group>
+					<Description>
+						Check whether the two elements are joined.
+					</Description>
+					<SearchTags>
+						arejoined,arejoined,revitnodes.revit.elements.element.arejoined
+					</SearchTags>
+					<Inputs>
+						<InputParameter Name="otherElement" Type="Element" />
+					</Inputs>
+					<Outputs>
+						<OutputParameter Name="bool" />
+					</Outputs>
+					<SmallIcon>
+						src\Resources\RevitNodes\SmallIcons\Revit.Elements.Element.AreJoined.Small.png
+					</SmallIcon>
+					<LargeIcon>
+						src\Resources\RevitNodes\LargeIcons\Revit.Elements.Element.AreJoined.Large.png
+					</LargeIcon>
+				</Dynamo.Search.SearchElements.ZeroTouchSearchElement>
+				<Dynamo.Search.SearchElements.ZeroTouchSearchElement>
+					<FullCategoryName>
+						Revit.Elements.Element
+					</FullCategoryName>
+					<Name>
 						Geometry
 					</Name>
 					<Group>
@@ -25664,6 +25693,98 @@
 					</SmallIcon>
 					<LargeIcon>
 						src\Resources\RevitNodes\LargeIcons\Revit.Elements.Element.Geometry.Large.png
+					</LargeIcon>
+				</Dynamo.Search.SearchElements.ZeroTouchSearchElement>
+				<Dynamo.Search.SearchElements.ZeroTouchSearchElement>
+					<FullCategoryName>
+						Revit.Elements.Element
+					</FullCategoryName>
+					<Name>
+						GetHostedElements
+					</Name>
+					<Group>
+						Action
+					</Group>
+					<Description>
+						Gets all elements hosted by the supplied element.
+					</Description>
+					<SearchTags>
+						gethostedelements,gethostedelements,revitnodes.revit.elements.element.GetHostedElements
+					</SearchTags>
+					<Inputs>
+						<InputParameter Name="element" Type="Element" />
+						<InputParameter Name="includeOpenings" Type="bool" />
+						<InputParameter Name="includeHostedElementsOfJoinedHosts" Type="bool" />
+						<InputParameter Name="includeEmbeddedWalls " Type="bool" />
+						<InputParameter Name="includeSharedEmbeddedInserts " Type="bool" />
+					</Inputs>
+					<Outputs>
+						<OutputParameter Name="Element[]" />
+					</Outputs>
+					<SmallIcon>
+						src\Resources\RevitNodes\SmallIcons\Revit.Elements.Element.GetHostedElements.Small.png
+					</SmallIcon>
+					<LargeIcon>
+						src\Resources\RevitNodes\LargeIcons\Revit.Elements.Element.GetHostedElements.Large.png
+					</LargeIcon>
+				</Dynamo.Search.SearchElements.ZeroTouchSearchElement>
+				<Dynamo.Search.SearchElements.ZeroTouchSearchElement>
+					<FullCategoryName>
+						Revit.Elements.Element
+					</FullCategoryName>
+					<Name>
+						GetIntersectingElementsOfCategory
+					</Name>
+					<Group>
+						Action
+					</Group>
+					<Description>
+						Gets all Elements intersecting the input element, that are of a specific category.
+					</Description>
+					<SearchTags>
+						getintersectingelementsofcategory,getintersectingelementsofcategory,revitnodes.revit.elements.element.getintersectingelementsofcategory
+					</SearchTags>
+					<Inputs>
+						<InputParameter Name="element" Type="Element" />
+						<InputParameter Name="category" Type="Category" />
+					</Inputs>
+					<Outputs>
+						<OutputParameter Name="Element[]" />
+					</Outputs>
+					<SmallIcon>
+						src\Resources\RevitNodes\SmallIcons\Revit.Elements.Element.GetIntersectingElementsOfCategory.Small.png
+					</SmallIcon>
+					<LargeIcon>
+						src\Resources\RevitNodes\LargeIcons\Revit.Elements.Element.GetIntersectingElementsOfCategory.Large.png
+					</LargeIcon>
+				</Dynamo.Search.SearchElements.ZeroTouchSearchElement>
+				<Dynamo.Search.SearchElements.ZeroTouchSearchElement>
+					<FullCategoryName>
+						Revit.Elements.Element
+					</FullCategoryName>
+					<Name>
+						GetJoinedElements
+					</Name>
+					<Group>
+						Action
+					</Group>
+					<Description>
+						Finds the elements whose geometry is joined with the given element.
+					</Description>
+					<SearchTags>
+						getjoinedelements,getjoinedelements,revitnodes.revit.elements.element.getjoinedelements
+					</SearchTags>
+					<Inputs>
+						<InputParameter Name="element" Type="Element" />
+					</Inputs>
+					<Outputs>
+						<OutputParameter Name="Element[]" />
+					</Outputs>
+					<SmallIcon>
+						src\Resources\RevitNodes\SmallIcons\Revit.Elements.Element.GetJoinedElements.Small.png
+					</SmallIcon>
+					<LargeIcon>
+						src\Resources\RevitNodes\LargeIcons\Revit.Elements.Element.GetJoinedElements.Large.png
 					</LargeIcon>
 				</Dynamo.Search.SearchElements.ZeroTouchSearchElement>
 				<Dynamo.Search.SearchElements.ZeroTouchSearchElement>
@@ -25753,6 +25874,36 @@
 					</SmallIcon>
 					<LargeIcon>
 						src\Resources\RevitNodes\LargeIcons\Revit.Elements.Element.GetParameterValueByName.Large.png
+					</LargeIcon>
+				</Dynamo.Search.SearchElements.ZeroTouchSearchElement>
+				<Dynamo.Search.SearchElements.ZeroTouchSearchElement>
+					<FullCategoryName>
+						Revit.Elements.Element
+					</FullCategoryName>
+					<Name>
+						JoinGeometry
+					</Name>
+					<Group>
+						Action
+					</Group>
+					<Description>
+						Joins the geometry of two elements, if they are intersecting.
+					</Description>
+					<SearchTags>
+						joingeometry,joingeometry,revitnodes.revit.elements.element.joingeometry
+					</SearchTags>
+					<Inputs>
+						<InputParameter Name="element" Type="Element" />
+						<InputParameter Name="otherElement" Type="Element" />
+					</Inputs>
+					<Outputs>
+						<OutputParameter Name="Elment[]" />
+					</Outputs>
+					<SmallIcon>
+						src\Resources\RevitNodes\SmallIcons\Revit.Elements.Element.JoinGeometry.Small.png
+					</SmallIcon>
+					<LargeIcon>
+						src\Resources\RevitNodes\LargeIcons\Revit.Elements.Element.JoinGeometry.Large.png
 					</LargeIcon>
 				</Dynamo.Search.SearchElements.ZeroTouchSearchElement>
 				<Dynamo.Search.SearchElements.ZeroTouchSearchElement>
@@ -25851,6 +26002,36 @@
 						Revit.Elements.Element
 					</FullCategoryName>
 					<Name>
+						SetGeometryJoinOrder
+					</Name>
+					<Group>
+						Action
+					</Group>
+					<Description>
+						Sets the order in which the geometry of two elements is joined.
+					</Description>
+					<SearchTags>
+						setgeometryjoinorder,setgeometryjoinorder,revitnodes.revit.elements.element.setgeometryjoinorder
+					</SearchTags>
+					<Inputs>
+						<InputParameter Name="cuttingElement" Type="Element" />
+						<InputParameter Name="otherElement" Type="Element" />
+					</Inputs>
+					<Outputs>
+						<OutputParameter Name="Element[]" />
+					</Outputs>
+					<SmallIcon>
+						src\Resources\RevitNodes\SmallIcons\Revit.Elements.Element.SetGeometryJoinOrder.Small.png
+					</SmallIcon>
+					<LargeIcon>
+						src\Resources\RevitNodes\LargeIcons\Revit.Elements.Element.SetGeometryJoinOrder.Large.png
+					</LargeIcon>
+				</Dynamo.Search.SearchElements.ZeroTouchSearchElement>
+				<Dynamo.Search.SearchElements.ZeroTouchSearchElement>
+					<FullCategoryName>
+						Revit.Elements.Element
+					</FullCategoryName>
+					<Name>
 						SetLocation
 					</Name>
 					<Group>
@@ -25912,6 +26093,36 @@
 						Revit.Elements.Element
 					</FullCategoryName>
 					<Name>
+						SetPinnedStatus
+					</Name>
+					<Group>
+						Action
+					</Group>
+					<Description>
+						Sets an existing element's pinned status.
+					</Description>
+					<SearchTags>
+						setpinnedstatus,setpinnedstatus,revitnodes.revit.elements.element.setpinnedstatus
+					</SearchTags>
+					<Inputs>
+						<InputParameter Name="element" Type="Element" />
+						<InputParameter Name="pinned" Type="bool" />
+					</Inputs>
+					<Outputs>
+						<OutputParameter Name="Element" />
+					</Outputs>
+					<SmallIcon>
+						src\Resources\RevitNodes\SmallIcons\Revit.Elements.Element.SetPinnedStatus.Small.png
+					</SmallIcon>
+					<LargeIcon>
+						src\Resources\RevitNodes\LargeIcons\Revit.Elements.Element.SetPinnedStatus.Large.png
+					</LargeIcon>
+				</Dynamo.Search.SearchElements.ZeroTouchSearchElement>
+				<Dynamo.Search.SearchElements.ZeroTouchSearchElement>
+					<FullCategoryName>
+						Revit.Elements.Element
+					</FullCategoryName>
+					<Name>
 						ToString
 					</Name>
 					<Group>
@@ -25936,6 +26147,65 @@
 					</SmallIcon>
 					<LargeIcon>
 						src\Resources\RevitNodes\LargeIcons\Revit.Elements.Element.ToString.Large.png
+					</LargeIcon>
+				</Dynamo.Search.SearchElements.ZeroTouchSearchElement>
+				<Dynamo.Search.SearchElements.ZeroTouchSearchElement>
+					<FullCategoryName>
+						Revit.Elements.Element
+					</FullCategoryName>
+					<Name>
+						UnjoinAllGeometry
+					</Name>
+					<Group>
+						Action
+					</Group>
+					<Description>
+						Unjoins the geometry of all elements from each other if they are joined.
+					</Description>
+					<SearchTags>
+						unjoinallgeometry,unjoinallgeometry,revitnodes.revit.elements.element.unjoinallgeometry
+					</SearchTags>
+					<Inputs>
+						<InputParameter Name="elements" Type="Element[]" />
+					</Inputs>
+					<Outputs>
+						<OutputParameter Name="Element[]" />
+					</Outputs>
+					<SmallIcon>
+						src\Resources\RevitNodes\SmallIcons\Revit.Elements.Element.UnjoinAllGeometry.Small.png
+					</SmallIcon>
+					<LargeIcon>
+						src\Resources\RevitNodes\LargeIcons\Revit.Elements.Element.UnjoinAllGeometry.Large.png
+					</LargeIcon>
+				</Dynamo.Search.SearchElements.ZeroTouchSearchElement>
+				<Dynamo.Search.SearchElements.ZeroTouchSearchElement>
+					<FullCategoryName>
+						Revit.Elements.Element
+					</FullCategoryName>
+					<Name>
+						UnjoinGeometry
+					</Name>
+					<Group>
+						Action
+					</Group>
+					<Description>
+						Unjoin the geometry of two Elements.
+					</Description>
+					<SearchTags>
+						unjoingeometry,unjoingeometry,revitnodes.revit.elements.element.unjoingeometry
+					</SearchTags>
+					<Inputs>
+						<InputParameter Name="element" Type="Element" />
+						<InputParameter Name="otherElement" Type="Element" />
+					</Inputs>
+					<Outputs>
+						<OutputParameter Name="Element[]" />
+					</Outputs>
+					<SmallIcon>
+						src\Resources\RevitNodes\SmallIcons\Revit.Elements.Element.UnjoinGeometry.Small.png
+					</SmallIcon>
+					<LargeIcon>
+						src\Resources\RevitNodes\LargeIcons\Revit.Elements.Element.UnjoinGeometry.Large.png
 					</LargeIcon>
 				</Dynamo.Search.SearchElements.ZeroTouchSearchElement>
 				<Dynamo.Search.SearchElements.ZeroTouchSearchElement>
@@ -26168,6 +26438,35 @@
 					</SmallIcon>
 					<LargeIcon>
 						src\Resources\RevitNodes\LargeIcons\Revit.Elements.Element.Id.Large.png
+					</LargeIcon>
+				</Dynamo.Search.SearchElements.ZeroTouchSearchElement>
+				<Dynamo.Search.SearchElements.ZeroTouchSearchElement>
+					<FullCategoryName>
+						Revit.Elements.Element
+					</FullCategoryName>
+					<Name>
+						IsPinned
+					</Name>
+					<Group>
+						Query
+					</Group>
+					<Description>
+						Get the Element Pinned status
+					</Description>
+					<SearchTags>
+						ispinned,ispinned,revitnodes.revit.elements.element.ispinned
+					</SearchTags>
+					<Inputs>
+						<InputParameter Name="element" Type="Element" />
+					</Inputs>
+					<Outputs>
+						<OutputParameter Name="bool" />
+					</Outputs>
+					<SmallIcon>
+						src\Resources\RevitNodes\SmallIcons\Revit.Elements.Element.IsPinned.Small.png
+					</SmallIcon>
+					<LargeIcon>
+						src\Resources\RevitNodes\LargeIcons\Revit.Elements.Element.IsPinned.Large.png
 					</LargeIcon>
 				</Dynamo.Search.SearchElements.ZeroTouchSearchElement>
 				<Dynamo.Search.SearchElements.ZeroTouchSearchElement>

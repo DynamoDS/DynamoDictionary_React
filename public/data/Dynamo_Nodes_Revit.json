@@ -479,11 +479,35 @@
 		"folderPath": "Revit/Elements/DividedSurface/Query",
 		"inDepth": "The number of V divisions is returned as an integer."
 	}, {
+		"Name": "AreJoined",
+		"imageFile": ["AreJoined"],
+		"dynFile": ["AreJoined"],
+		"folderPath": "Revit/Elements/Element/Action",
+		"inDepth": ""
+	}, {
 		"Name": "Geometry",
 		"imageFile": ["Geometry"],
 		"dynFile": ["Geometry"],
 		"folderPath": "Revit/Elements/Element/Action",
 		"inDepth": "Geometry brings the underlying geometry of a Revit element into Dynamo. For example, this node will extract a solid from a column. Revit elements can have multiple base geometries and types."
+	}, {
+		"Name": "GetHostedElements",
+		"imageFile": ["GetHostedElements"],
+		"dynFile": ["GetHostedElements"],
+		"folderPath": "Revit/Elements/Element/Action",
+		"inDepth": "Collect all the content that is hosted to the element.IncludeOpenings means get all hosted elements, such as openings, windows, and doors. IncludeShadows means use this node when two walls are joined (by Modify->Geometry->Join), and a door is placed on one of the joined walls. If includeShadow is set to true, then Revit returns the door element ID. IncludeEmbeddedWalls means get the entire embedded wall or curtain wall. IncludeSharedEmbeddedInserts means get the door, window, or other inserts that are hosted in the embedded wall."
+	}, {
+		"Name": "GetIntersectingElementsOfCategory",
+		"imageFile": ["GetIntersectingElementsOfCategory"],
+		"dynFile": ["GetIntersectingElementsOfCategory"],
+		"folderPath": "Revit/Elements/Element/Action",
+		"inDepth": ""
+	}, {
+		"Name": "GetJoinedElements",
+		"imageFile": ["GetJoinedElements"],
+		"dynFile": ["GetJoinedElements"],
+		"folderPath": "Revit/Elements/Element/Action",
+		"inDepth": ""
 	}, {
 		"Name": "GetLocation",
 		"imageFile": ["GetLocation"],
@@ -503,6 +527,12 @@
 		"folderPath": "Revit/Elements/Element/Action",
 		"inDepth": "GetParameterValueByName will return the value of an element's parameter given the parameter name as a string. This can be useful for querying a list of element parameters."
 	}, {
+		"Name": "JoinGeometry",
+		"imageFile": ["JoinGeometry"],
+		"dynFile": ["JoinGeometry"],
+		"folderPath": "Revit/Elements/Element/Action",
+		"inDepth": ""
+	}, {
 		"Name": "MoveByVector",
 		"imageFile": ["MoveByVector"],
 		"dynFile": ["MoveByVector"],
@@ -521,11 +551,23 @@
 		"folderPath": "Revit/Elements/Element/Action",
 		"inDepth": "OverrideInView will alter the graphics settings of input elements. The override created in Dynamo will dynamically change in Revit."
 	}, {
+		"Name": "SetGeometryJoinOrder",
+		"imageFile": ["SetGeometryJoinOrder"],
+		"dynFile": ["SetGeometryJoinOrder"],
+		"folderPath": "Revit/Elements/Element/Action",
+		"inDepth": ""
+	}, {
 		"Name": "SetLocation",
 		"imageFile": ["SetLocation"],
 		"dynFile": ["SetLocation"],
 		"folderPath": "Revit/Elements/Element/Action",
 		"inDepth": "SetLocation will move a Revit element to a new location defined by a point in Dynamo."
+	}, {
+		"Name": "SetPinnedStatus",
+		"imageFile": ["SetPinnedStatus"],
+		"dynFile": ["SetPinnedStatus"],
+		"folderPath": "Revit/Elements/Element/Action",
+		"inDepth": ""
 	}, {
 		"Name": "SetParameterByName",
 		"imageFile": ["SetParameterByName"],
@@ -538,6 +580,18 @@
 		"dynFile": ["ToString"],
 		"folderPath": "Revit/Elements/Element/Action",
 		"inDepth": "A basic implementation of ToString for Elements."
+	}, {
+		"Name": "UnjoinAllGeometry",
+		"imageFile": ["UnjoinAllGeometry"],
+		"dynFile": ["UnjoinAllGeometry"],
+		"folderPath": "Revit/Elements/Element/Action",
+		"inDepth": ""
+	}, {
+		"Name": "UnjoinGeometry",
+		"imageFile": ["UnjoinGeometry"],
+		"dynFile": ["UnjoinGeometry"],
+		"folderPath": "Revit/Elements/Element/Action",
+		"inDepth": ""
 	}, {
 		"Name": "BoundingBox",
 		"imageFile": ["BoundingBox"],
@@ -586,6 +640,12 @@
 		"dynFile": ["Id"],
 		"folderPath": "Revit/Elements/Element/Query",
 		"inDepth": "Id returns a parameter's id as an integer."
+	}, {
+		"Name": "IsPinned",
+		"imageFile": ["IsPinned"],
+		"dynFile": ["IsPinned"],
+		"folderPath": "Revit/Elements/Element/Query",
+		"inDepth": ""
 	}, {
 		"Name": "Name",
 		"imageFile": ["Name"],
