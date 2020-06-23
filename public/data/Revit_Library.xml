@@ -25654,6 +25654,7 @@
 						arejoined,arejoined,revitnodes.revit.elements.element.arejoined
 					</SearchTags>
 					<Inputs>
+						<InputParameter Name="element" Type="Element" />
 						<InputParameter Name="otherElement" Type="Element" />
 					</Inputs>
 					<Outputs>
