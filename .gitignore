@@ -5,6 +5,7 @@
 
 # dependencies
 node_modules
+public/bower_components
 
 # testing
 coverage
