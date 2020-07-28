@@ -7,7 +7,7 @@ Live version here: http://dictionary.dynamobim.com
 ## Installation
 - In root directory, type ```npm install``` into the command line.
 - In public directory, ```run bower install mocha```, ```bower install requirejs``` and ```bower install blanket```. Make sure Bower package manager is already installed.
-   These dependencies will be downloaded into a new folder 'bower_components'.
+  These dependencies will be downloaded into a new folder 'bower_components'.
 
 ## Run in Development Mode
 - In root directory, type ```npm run start``` into the command line.
