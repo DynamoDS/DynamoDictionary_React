@@ -17,7 +17,7 @@ function Sidebar(props) {
   }
 
   return (
-    <div style={{ paddingBottom: props.iteration === 0 ? "300px" : null }}>
+    <div style={{ paddingBottom: null }}>
       {props.dictionary.map((ob, i) =>
         <div key={i}>
           <SidebarButton

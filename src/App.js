@@ -4,6 +4,7 @@ import { hashHistory } from "react-router";
 import "./css/font.css";
 import "./css/style.css";
 
+import CommonErrorMessagesButton from "./components/CommonErrorMessagesButton";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Branch from "./components/Branch";
@@ -181,7 +182,7 @@ class App extends Component {
   render() {
     const isLarge = window.innerWidth > this.state.minWidth;
     const ratio = this.props.sidebarOpen && isLarge ? 0.3 : 0;
-
+    
     return this.props.route !== ""
       ? <div className="App">
           {" "}<Header
@@ -237,6 +238,8 @@ class App extends Component {
                           iteration={0}
                           routePush={this._routePush}
                         />
+                        <hr />
+                        <CommonErrorMessagesButton />
                       </ul>
                       <br />
                       <br />

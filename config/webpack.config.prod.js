@@ -154,6 +154,10 @@ module.exports = {
           limit: 10000,
           name: 'static/media/[name].[hash:8].[ext]'
         }
+      },
+      {
+        test: /\.html$/,
+        loader: 'html-loader'
       }
     ]
   },

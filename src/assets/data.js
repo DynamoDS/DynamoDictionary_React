@@ -5,6 +5,7 @@ import p from "../util/promise";
 const pEdit = p.promisify(d3.json, "data/Dynamo_Nodes_Documentation.json");
 const pRevit = p.promisify(d3.xml, "data/Revit_Library.xml");
 const pBacklog = p.promisify(d3.json, "data/Dynamo_Nodes_Revit.json");
+const pErrors = p.promisify(d3.json, "data/Dynamo_Error_Messages.json");
 
 //resolve promises
-export default Promise.all([pRevit, pEdit, pBacklog]);
+export default Promise.all([pRevit, pEdit, pBacklog, pErrors]);

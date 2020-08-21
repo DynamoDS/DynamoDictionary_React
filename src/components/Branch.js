@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link, withRouter } from "react-router";
 import { lineageToRoute } from "../util/lineageRouter";
 
 import { flatten, flattenHierarchy } from "../util/array";
@@ -9,6 +9,7 @@ import NodeInfo from "./NodeInfo";
 import NodeTitle from "./NodeTitle";
 import DynamoHierarchy from "./DynamoHierarchy";
 import Home from "./Home";
+import CommonErrorMessagesContainer from "./CommonErrorMessagesContainer";
 
 class Branch extends React.Component {
   constructor() {
@@ -103,8 +104,11 @@ class Branch extends React.Component {
     let actives = props.actives;
     let lastLeaf = actives[actives.length - 1];
 
+    let showErrorMessages = (this.props.location &&
+      this.props.location.pathname.includes('CommonErrorMessages'))
+
     return !props.searching && !props.actives[0]
-      ? <Home />
+      ? (showErrorMessages ? <CommonErrorMessagesContainer /> : <Home />)
       : <div style={{ padding: "10%", paddingTop: "30px" }}>
           <div
             style={{
@@ -165,4 +169,4 @@ class Branch extends React.Component {
   }
 }
 
-export default Branch;
+export default withRouter(Branch);

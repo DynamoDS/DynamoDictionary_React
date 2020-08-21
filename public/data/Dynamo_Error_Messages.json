@@ -1,0 +1,198 @@
+[
+    {
+    "id": "General",
+    "name": "General",
+    "path": "CommonErrorMessages/General/",
+    "children": [
+            {
+                "id": "RunCompletedWithWarningsMessage",
+                "name": "Run completed with warnings",
+                "description": "Run completed with warnings error message"
+            },
+            {
+                "id": "NothingIsSelectedWarning",
+                "name": "Nothing is selected",
+                "description": "Nothing is selected error message"
+            },
+            {
+                "id": "CustomNodeNotLoaded",
+                "name": "Custom node not loaded",
+                "description": "Custom node not loaded error message"
+            },
+            {
+                "id": "Deprecated",
+                "name": "Deprecated method or node",
+                "description": "Deprecated method or node error message"
+            }
+        ]
+    }, 
+    {
+    "id": "Input",
+    "name": "Input",
+    "path": "CommonErrorMessages/Input/",
+    "children": [
+            {
+                "id": "NonOverloadMethodResolutionError",
+                "name": "Expects argument type(s), but was called with",
+                "description": "Expects argument type(s), but was called with error message"
+            },
+            {
+                "id": "kMethodHasInvalidArguments",
+                "name": "Has some invalid arguments",
+                "description": "Has some invalid arguments error message"
+            },
+            {
+                "id": "ArgumentNullException",
+                "name": "Value cannot be null",
+                "description": "Value cannot be null error message"
+            },
+            {
+                "id": "DereferencingNonPointer",
+                "name": "Dereferencing non-pointer",
+                "description": "Dereferencing non-pointer error message"
+            }
+        ]
+    },
+
+    {
+    "id": "Script",
+    "name": "Script",
+    "path": "CommonErrorMessages/Script/",
+    "children": [
+            {
+                "id": "OperationFailType1",
+                "name": "Operation failed",
+                "description": "Operation failed error message"
+            },
+            {
+                "id": "kMethodNotFound",
+                "name": "Method not found",
+                "description": "Method not found error message"
+            },
+            {
+                "id": "UnhandledException",
+                "name": "Unhandled exception",
+                "description": "Unhandled exception error message"
+            },
+            {
+                "id": "UnhandledExceptionInDynamoEngine",
+                "name": "Unhandled exception in Dynamo engine",
+                "description": "Unhandled exception in Dynamo engine error message"
+            },
+            {
+                "id": "kMultipleSymbolFound",
+                "name": "Multiple definitions found",
+                "description": "Multiple definitions found error message"
+            },
+            {
+                "id": "kCyclicDependency",
+                "name": "A cyclic dependency exists between two variables",
+                "description": "A cyclic dependency exists between two variables error message"
+            },
+            {
+                "id": "kPropertyOfClassNotFound",
+                "name": "No property could be found",
+                "description": "No property could be found error message"
+            },
+            {
+                "id": "FailedToCastFromNull",
+                "name": "Null value cannot be cast to type",
+                "description": "Null value cannot be cast to type error message"
+            }
+        ]
+    },
+
+    {
+    "id": "List",   
+    "name": "List",
+    "path": "CommonErrorMessages/List/",
+    "children": [
+            {
+                "id": "kIndexOutOfRange",
+                "name": "Index is out of range",
+                "description": "Index is out of range error message"
+            },
+            {
+                "id": "kArrayOverIndexed",
+                "name": "The index is outside the given range",
+                "description": "The index is outside the given range error message"
+            },
+            {
+                "id": "InvalidArrayIndexType",
+                "name": "List indices must be numeric",
+                "description": "List indices must be numeric error message"
+            },
+            {
+                "id": "InvalidKeysLenghtErrorMessage",
+                "name": "Number of items does not match the number of keys",
+                "description": "Number of items does not match the number of keys error message"
+            },
+            {
+                "id": "kConvertArrayToNonArray",
+                "name": "Converting array would cause array rank reduction",
+                "description": "Converting array would cause array rank reduction error message"
+            }
+        ]
+    },
+    {
+    "id": "ImportExport",
+    "name": "ImportExport",
+    "path": "CommonErrorMessages/ImportExport/",
+    "children": [
+            {
+                "id": "MessageErrorOpeningFileGeneral",
+                "name": "Error opening file",
+                "description": "Error opening file message"
+            },
+            {
+                "id": "MessageFailedToOpenCorruptedFile",
+                "name": "Error opening corrupted file",
+                "description": "Error opening corrupted file message"
+            }
+        ]
+    },
+    {
+    "id": "Geometry",
+    "name": "Geometry",
+    "path": "CommonErrorMessages/Geometry/",
+    "children": [
+            {
+                "id": "errorLibGCorePolycurveMoreThanOneWIRE",
+                "name": "Curve join produced more than one WIRE in Polycurve",
+                "description": "Curve join produced more than one WIRE in Polycurve error message"
+            },
+            {
+                "id": "errorLibGCorePolycurveBranching",
+                "name": "Polycurves may (not) be branching",
+                "description": "Polycurves may (not) be branching error message"
+            },
+            {
+                "id": "errorLibGCoreUnableToLoft",
+                "name": "Unable to loft",
+                "description": "Unable to loft error message"
+            },
+            {
+                "id": "errorLibGCoreCannotMakePolycurveFromEmptyList",
+                "name": "Cannot make Polycurve from empty list",
+                "description": "Cannot make Polycurve from empty list error message"
+            },
+            {
+                "id": "errorLibGCoreUnableUpdateSolidBySweep",
+                "name": "Unable to update solid by sweep",
+                "description": "Unable to update solid by sweep error message"
+            }    
+        ]
+    },
+    {
+    "id": "Office",
+    "name": "Office",
+    "path": "CommonErrorMessages/Office/",
+    "children": [
+            {
+                "id": "ExcelNotInstalled",
+                "name": "Excel not installed",
+                "description": "Excel not installed error message"
+            }
+        ]
+    }
+]
