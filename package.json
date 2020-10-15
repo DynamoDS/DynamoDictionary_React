@@ -17,7 +17,7 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-image-lightbox": "^5.1.1",
-    "react-modal-bootstrap": "^1.1.0",
+    "react-modal-bootstrap16": "^1.0.1",
     "react-redux": "^5.0.6",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
