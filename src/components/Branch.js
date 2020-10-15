@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { lineageToRoute } from "../util/lineageRouter";
 
 import { flatten, flattenHierarchy } from "../util/array";

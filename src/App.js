@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { hashHistory } from "react-router";
+import { HashRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import "./css/font.css";
@@ -15,9 +15,6 @@ import Drawer from "material-ui/Drawer";
 
 import baseTheme from "material-ui/styles/baseThemes/lightBaseTheme";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
-
-import injectTapEventPlugin from "react-tap-event-plugin";
-injectTapEventPlugin();
 
 class App extends Component {
   constructor() {
@@ -76,7 +73,7 @@ class App extends Component {
       this.props.route === route
         ? `${route.split("/").slice(0, iteration + 1).join("/")}`
         : route;
-    hashHistory.push(new_route);
+        HashRouter.push(new_route);
 
     // this.props.actions.pushRoute(route, iteration, this.props.route);
   }
