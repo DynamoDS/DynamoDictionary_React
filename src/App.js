@@ -11,10 +11,10 @@ import Branch from "./components/Branch";
 import SearchBar from "./components/SearchBar";
 import PullModal from "./components/PullModal";
 
-import Drawer from "material-ui/Drawer";
+import Drawer from "@material-ui/core";
 
-import baseTheme from "material-ui/styles/baseThemes/lightBaseTheme";
-import getMuiTheme from "material-ui/styles/getMuiTheme";
+import baseTheme from "@material-ui/core/styles/baseThemes/lightBaseTheme";
+import getMuiTheme from "@material-ui/core/styles";
 
 class App extends Component {
   constructor() {
@@ -73,7 +73,7 @@ class App extends Component {
       this.props.route === route
         ? `${route.split("/").slice(0, iteration + 1).join("/")}`
         : route;
-        HashRouter.push(new_route);
+        //HashRouter.push(new_route);
 
     // this.props.actions.pushRoute(route, iteration, this.props.route);
   }

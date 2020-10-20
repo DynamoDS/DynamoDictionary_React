@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LastPage from 'material-ui/svg-icons/navigation/chevron-right';
-import FirstPage from 'material-ui/svg-icons/navigation/chevron-left';
-import FlatButton from 'material-ui/FlatButton';
+import LastPage from '@material-ui/icons/navigation/chevron-right';
+import FirstPage from '@material-ui/icons/navigation/chevron-left';
+import FlatButton from '@material-ui/core/FlatButton';
 
 function Header(props){
 
