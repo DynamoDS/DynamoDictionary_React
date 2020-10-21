@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LastPage from '@material-ui/icons/navigation/chevron-right';
-import FirstPage from '@material-ui/icons/navigation/chevron-left';
-import FlatButton from '@material-ui/core/FlatButton';
+import LastPage from '@material-ui/icons/ChevronRight';
+import FirstPage from '@material-ui/icons/ChevronLeft';
+import FlatButton from '@material-ui/core/Button';
 
 function Header(props){
 
@@ -10,11 +10,11 @@ function Header(props){
         <div className="titleDiv">
           <div className='pull-left' style={{display:'inline', position:'absolute', left:'15px', color:'white', zIndex:10}}>
             {props.isLarge ?
-                <FlatButton label={'library'} labelPosition={props.treeOpen?"after":"before"}
-                  labelStyle={{color:'white', fontWeight:100, fontFamily:"'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif", fontSize:12}}
+                <FlatButton label={'library'} labelposition={props.treeOpen?"after":"before"}
+                  labelstyle={{color:'white', fontWeight:100, fontFamily:"'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif", fontSize:12}}
                   style={{color:'white'}}
                   onClick={props.toggleTree} icon={props.treeOpen?<FirstPage/>:<LastPage/>}
-                    backgroundColor='rgb(34,34,34)'
+                    backgroundcolor='rgb(34,34,34)'
                 />
               :null}
           </div>
@@ -33,20 +33,20 @@ function Header(props){
         //TODO : Hiding the Submit PR button, as the feature is not fuctional with the latest node update. This is a temporary change and will be re-visited/fixed in the future version.
         /* <div  className='graytext'  style={{'position':'absolute', 'right':'0', 'top':'0','paddingRight':'10px'}}>
           {props.phase==='committing' ? <a href={props.link} target="_blank" rel="noopener noreferrer">
-            <FlatButton label={'github'} labelPosition="after"
-              labelStyle={{color:'white', fontWeight:100, fontFamily:"'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif", fontSize:12}}
+            <FlatButton label={'github'} labelposition="after"
+              labelstyle={{color:'white', fontWeight:100, fontFamily:"'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif", fontSize:12}}
               style={{color:'white'}}
               onClick={props.openModal} icon={<img src="images/icons/octocat.png" id='prLogo' width='18px' alt="prIcon"/>}
-              backgroundColor='rgb(34,34,34)'
+              backgroundcolor='rgb(34,34,34)'
             />
             </a>
             :null
            }
-          <FlatButton label={props.phase==='init'?'Submit PR':'Add Commit'} labelPosition="after"
-            labelStyle={{color:'white', fontWeight:100, fontFamily:"'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif", fontSize:12}}
+          <FlatButton label={props.phase==='init'?'Submit PR':'Add Commit'} labelposition="after"
+            labelstyle={{color:'white', fontWeight:100, fontFamily:"'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif", fontSize:12}}
             style={{color:'white'}}
             onClick={props.openModal} icon={<img src="images/icons/pr_invert.png" id='prLogo' width='16px' alt="pr"/>}
-            backgroundColor='rgb(34,34,34)'
+            backgroundcolor='rgb(34,34,34)'
           />
 
 

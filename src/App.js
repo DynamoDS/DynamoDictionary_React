@@ -11,10 +11,9 @@ import Branch from "./components/Branch";
 import SearchBar from "./components/SearchBar";
 import PullModal from "./components/PullModal";
 
-import Drawer from "@material-ui/core";
+import { Drawer } from "@material-ui/core";
 
-import baseTheme from "@material-ui/core/styles/baseThemes/lightBaseTheme";
-import getMuiTheme from "@material-ui/core/styles";
+import { createMuiTheme } from "@material-ui/core/styles";
 
 class App extends Component {
   constructor() {
@@ -33,7 +32,7 @@ class App extends Component {
     this._routePush = this._routePush.bind(this);
   }
   getChildContext() {
-    return { muiTheme: getMuiTheme(baseTheme) };
+    return { muiTheme: createMuiTheme() };
   }
 
   _retrieve(url) {
@@ -75,7 +74,7 @@ class App extends Component {
         : route;
         //HashRouter.push(new_route);
 
-    // this.props.actions.pushRoute(route, iteration, this.props.route);
+    this.props.actions.pushRoute(route, iteration, this.props.route);
   }
   shouldComponentUpdate(nextProps, nextState) {
     if (
@@ -135,7 +134,7 @@ class App extends Component {
       if (rightdiv) {
         rightdiv.scrollTop = 0;
       }
-      if (true) {
+      if (this.props.params) {
         const r = this.props.params;
         const allkeys = Object.keys(r).sort();
         const actives = recursiveActives(this.props.hierarchy, 0) || [];
@@ -164,15 +163,17 @@ class App extends Component {
     }
   }
 
+  resizeAction = () => {
+    const _this = this;
+    _this.forceUpdate();
+  }
+
   componentWillUnmount() {
-    window.removeEventListener("resize");
+    window.removeEventListener("resize", this.resizeAction);
   }
 
   componentDidMount() {
-    const _this = this;
-    window.addEventListener("resize", () => {
-      _this.forceUpdate();
-    });
+    window.addEventListener("resize", this.resizeAction);
     this.props.actions.loadHierarchy();
   }
 
@@ -198,11 +199,11 @@ class App extends Component {
               ? <div>
                   <Drawer
                     id="sidebar-wrapper"
-                    docked={true}
+                    docked="true"
                     width={window.innerWidth * ratio}
                     open={this.props.sidebarOpen}
-                    containerStyle={{
-                      backgroundColor: "rgb(34,34,34)",
+                    containerstyle={{
+                      backgroundcolor: "rgb(34,34,34)",
                       marginTop: "60px"
                     }}
                   >

@@ -19,14 +19,13 @@ export const store = createStore(rootReducer, middleware);
 ReactDOM.render(
   <Provider store={store}>
     <HashRouter>
-      <Route path="/" component={App}>
-        <Route path="/:catA" component={App} />
-        <Route path="/:catA/:catB" component={App} />
-        <Route path="/:catA/:catB/:catC" component={App} />
-        <Route path="/:catA/:catB/:catC/:catD" component={App} />
-        <Route path="/:catA/:catB/:catC/:catD/:catE" component={App} />
-        <Route path="/search/:searchVal" component={App} />
-      </Route>
+      <Route path="/" component={App} />
+      <Route path="/:catA" component={App} />
+      <Route path="/:catA/:catB" component={App} />
+      <Route path="/:catA/:catB/:catC" component={App} />
+      <Route path="/:catA/:catB/:catC/:catD" component={App} />
+      <Route path="/:catA/:catB/:catC/:catD/:catE" component={App} />
+      <Route path="/search/:searchVal" component={App} />
     </HashRouter>
   </Provider>,
   document.getElementById("root")

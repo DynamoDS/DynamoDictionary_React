@@ -18,7 +18,7 @@ function NodeIcon(props) {
         ref={el => (element = el)}
         height={props.width}
         style={{
-          backgroundColor: "rgb(34,34,34)",
+          backgroundcolor: "rgb(34,34,34)",
           marginRight: "10px"
         }}
         src={path.join("images", props.node.SmallIcon)}
