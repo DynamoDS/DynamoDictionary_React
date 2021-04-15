@@ -1,6 +1,6 @@
 import React from 'react';
 import TextEditor from './TextEditor';
-import IconButton from 'material-ui/IconButton';
+import IconButton from '@material-ui/core/IconButton';
 
 function InDepthSection(props) {
   let node=props.node;

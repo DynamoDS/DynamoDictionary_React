@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import path from "path";
 
 import { lineageToRoute } from "../util/lineageRouter";
@@ -18,7 +18,7 @@ function NodeIcon(props) {
         ref={el => (element = el)}
         height={props.width}
         style={{
-          backgroundColor: "rgb(34,34,34)",
+          backgroundcolor: "rgb(34,34,34)",
           marginRight: "10px"
         }}
         src={path.join("images", props.node.SmallIcon)}

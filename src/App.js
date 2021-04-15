@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { hashHistory } from "react-router";
+import { HashRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import "./css/font.css";
@@ -11,13 +11,9 @@ import Branch from "./components/Branch";
 import SearchBar from "./components/SearchBar";
 import PullModal from "./components/PullModal";
 
-import Drawer from "material-ui/Drawer";
+import { Drawer } from "@material-ui/core";
 
-import baseTheme from "material-ui/styles/baseThemes/lightBaseTheme";
-import getMuiTheme from "material-ui/styles/getMuiTheme";
-
-import injectTapEventPlugin from "react-tap-event-plugin";
-injectTapEventPlugin();
+import { createMuiTheme } from "@material-ui/core/styles";
 
 class App extends Component {
   constructor() {
@@ -36,7 +32,7 @@ class App extends Component {
     this._routePush = this._routePush.bind(this);
   }
   getChildContext() {
-    return { muiTheme: getMuiTheme(baseTheme) };
+    return { muiTheme: createMuiTheme() };
   }
 
   _retrieve(url) {
@@ -76,9 +72,9 @@ class App extends Component {
       this.props.route === route
         ? `${route.split("/").slice(0, iteration + 1).join("/")}`
         : route;
-    hashHistory.push(new_route);
+        //HashRouter.push(new_route);
 
-    // this.props.actions.pushRoute(route, iteration, this.props.route);
+    this.props.actions.pushRoute(route, iteration, this.props.route);
   }
   shouldComponentUpdate(nextProps, nextState) {
     if (
@@ -138,7 +134,7 @@ class App extends Component {
       if (rightdiv) {
         rightdiv.scrollTop = 0;
       }
-      if (true) {
+      if (this.props.params) {
         const r = this.props.params;
         const allkeys = Object.keys(r).sort();
         const actives = recursiveActives(this.props.hierarchy, 0) || [];
@@ -167,15 +163,17 @@ class App extends Component {
     }
   }
 
+  resizeAction = () => {
+    const _this = this;
+    _this.forceUpdate();
+  }
+
   componentWillUnmount() {
-    window.removeEventListener("resize");
+    window.removeEventListener("resize", this.resizeAction);
   }
 
   componentDidMount() {
-    const _this = this;
-    window.addEventListener("resize", () => {
-      _this.forceUpdate();
-    });
+    window.addEventListener("resize", this.resizeAction);
     this.props.actions.loadHierarchy();
   }
 
@@ -201,11 +199,11 @@ class App extends Component {
               ? <div>
                   <Drawer
                     id="sidebar-wrapper"
-                    docked={true}
+                    docked="true"
                     width={window.innerWidth * ratio}
                     open={this.props.sidebarOpen}
-                    containerStyle={{
-                      backgroundColor: "rgb(34,34,34)",
+                    containerstyle={{
+                      backgroundcolor: "rgb(34,34,34)",
                       marginTop: "60px"
                     }}
                   >

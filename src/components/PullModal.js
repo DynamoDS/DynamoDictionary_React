@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import CommitField from "./CommitField";
 
-import CircularProgress from "material-ui/CircularProgress";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 import {
   Modal,
@@ -9,7 +9,7 @@ import {
   ModalTitle,
   ModalBody,
   ModalFooter
-} from "react-modal-bootstrap";
+} from "react-modal-bootstrap16";
 
 class ModeModal extends Component {
   constructor() {
@@ -96,7 +96,7 @@ class ModeModal extends Component {
                   <input
                     type="text"
                     style={{
-                      backgroundColor: "rgb(34,34,34)",
+                      backgroundcolor: "rgb(34,34,34)",
                       borderWidth: "1px",
                       borderRadius: "4px",
                       padding: "5px",
