@@ -155,8 +155,9 @@ To manually add and document new nodes into the library, following steps are req
 </Categtory>
 ```
 - Create folders in the *public/data/EXAMPLES* directory with the same name as the parent category and sub-categories, appropriately nested,\
-    create group folders (Create, Query or Action),\
-    create `dyn` and `img` folders and place .dyn files and images related to the node in them.(Refer [Folder Structure](https://github.com/DynamoDS/DynamoDictionary_React/blob/master/public/data/README.md#folder-structure))
+    Create group folders (Create, Query or Action),\
+    Create `dyn` and `img` folders and place .dyn files and images related to the node in them. (Refer [Folder Structure](https://github.com/DynamoDS/DynamoDictionary_React/blob/master/public/data/README.md#folder-structure))\
+    Alternatively, images/files for host nodes can also be placed in `public/images/src/Resources`.
 
 It is important for the node to appear in the library correctly data that you update both the JSON and XML files along with creating the required folders.
 
