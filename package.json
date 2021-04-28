@@ -27,7 +27,8 @@
     "react-tap-event-plugin": "^2.0.1",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "ua-parser-js": "^0.7.23"
   },
   "scripts": {
     "start": "react-scripts start",
