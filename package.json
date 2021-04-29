@@ -4,7 +4,7 @@
   "private": true,
   "devDependencies": {},
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "classnames": "^2.2.5",
     "d3": "^4.4.2",
     "eslint-config-react-app": "^5.2.1",
