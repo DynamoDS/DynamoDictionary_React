@@ -17,6 +17,6 @@ build
 .DS_Store
 .env
 npm-debug.log
-
+.npmrc
 node_modules
 configuration/*.json
