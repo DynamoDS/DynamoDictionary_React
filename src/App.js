@@ -16,9 +16,6 @@ import Drawer from "material-ui/Drawer";
 import baseTheme from "material-ui/styles/baseThemes/lightBaseTheme";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 
-// import injectTapEventPlugin from "react-tap-event-plugin";
-// injectTapEventPlugin();
-
 class App extends Component {
   constructor() {
     super();
