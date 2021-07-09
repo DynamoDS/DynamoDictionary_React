@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import CommitField from "./CommitField";
 
-import CircularProgress from "material-ui/CircularProgress";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 import {
   Modal,

@@ -6,6 +6,8 @@
     "react-scripts": "^4.0.3"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.1",
+    "@material-ui/icons": "^4.11.2",
     "axios": "^0.21.1",
     "classnames": "^2.2.5",
     "d3": "^4.4.2",
@@ -13,7 +15,6 @@
     "jquery": "^3.1.1",
     "js-search": "^1.4.2",
     "lodash": "^4.17.21",
-    "material-ui": "^0.20.0",
     "octokit": "^0.10.4",
     "path": "^0.12.7",
     "prop-types": "^15.7.2",
